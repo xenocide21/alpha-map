@@ -4,10 +4,10 @@ const { app, BrowserWindow } = require('electron')
 function createWindow () {
     const win = new BrowserWindow({
         width: 1200,
-        height: 700,
+        height: 694,
         icon: __dirname + `/o.ico`
     })
-    win.loadFile('index.html')
+    win.loadFile('startup.html')
     win.setMenu(null)
 }
 
