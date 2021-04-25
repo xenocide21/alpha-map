@@ -12,28 +12,32 @@ The project was built from the ground up using the following commands:
 
 ### `npm init -y`
 
-initialize NPM
+initialize NPM.
 
 ### `npm i --save-dev Electron`
 
-installs Electron as a dev dependency
+installs Electron as a dev dependency.
 
 ### `npm i --save-dev @electron-forge/cli`
 
-installs Electron-Forge
+installs Electron-Forge.
+
+### `npm i --save source-map-support`
+
+installs source-map-support library (required for electron-forge).
 
 ### `npx electron-forge import`
 
-imports electron application into electron forge workflow
+imports electron application into electron forge workflow.
 
-After you install NPM you should be able to run npm start to begin the platform through your ide. To build the application, run `npx electron-forge import` then `npm run make`
+After you install NPM you should be able to run npm start to begin the platform through your ide. To build the application, run `npx electron-forge import` then `npm run make`.
 
 ## Run commands
 
 ### `npm start`
 
-starts the application in development mode
+starts the application in development mode.
 
 ### `npm run make`
 
-builds the application into a binary .exe file
+builds the application into a binary .exe file.
