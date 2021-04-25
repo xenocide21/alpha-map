@@ -24,6 +24,8 @@ installs Electron-Forge
 
 imports electron application into electron forge workflow
 
+## Run commands
+
 ### `npm start`
 
 starts the application in development mode
