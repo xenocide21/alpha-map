@@ -40,4 +40,4 @@ starts the application in development mode.
 
 ### `npm run make`
 
-builds the application into a binary .exe file.
+builds the application into a binary .exe file
