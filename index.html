@@ -46,6 +46,9 @@
             width: 640px;
             border: 1px solid #000;
         }
+        #quit {
+            -webkit-app-region: no-drag;
+        }
 
         #mapgrid {
             position: absolute;
@@ -2810,99 +2813,6 @@ of the dropped item, and where (dd.obj.x, dd.obj.y) it has been dropped... */
                 </form>
             </td>
         </tr>
-        <!--  <tr>-->
-        <!--    <td class="category"><a href="#" onclick="return hidify_showify('keys','keys_arrow');"><img src="./images/arrow_down.gif" alt="Expand" border="0" id="keys_arrow" /> Key</a></td>-->
-        <!--  </tr>-->
-        <!--  <tr>-->
-        <!--    <td id="keys">-->
-        <!--      <table class="invtable">-->
-        <!--      <tr>-->
-        <!--        <td><img src="./images/up.gif" width="24" height="24" /></td>-->
-        <!--        <td>Path Up</td>-->
-        <!--        <td><img src="./images/down.gif" width="24" height="24" /></td>-->
-        <!--        <td>Path Down</td>-->
-        <!--      </tr>-->
-        <!--      <tr>-->
-        <!--        <td><img src="./images/cross.gif" width="24" height="24" /></td>-->
-        <!--        <td>Temple</td>-->
-        <!--        <td><img src="./images/orange.gif" width="24" height="24" /></td>-->
-        <!--        <td>Orange Portal</td>-->
-        <!--      </tr>-->
-        <!--      <tr>-->
-        <!--        <td><img src="./images/bsing.gif" width="24" height="24" /></td>-->
-        <!--        <td>Forge</td>-->
-        <!--        <td><img src="./images/cook.gif" width="24" height="24" /></td>-->
-        <!--        <td>Fireplace or Firepit</td>-->
-        <!--      </tr>-->
-        <!--      <tr>-->
-        <!--        <td><img src="./images/food.gif" width="24" height="24" /></td>-->
-        <!--        <td>Restaurant</td>-->
-        <!--        <td><img src="./images/beer.gif" width="24" height="24" /></td>-->
-        <!--        <td>Pub</td>-->
-        <!--      </tr>-->
-        <!--      <tr>-->
-        <!--        <td><img src="./images/bank.gif" width="24" height="24" /></td>-->
-        <!--        <td>Bank</td>-->
-        <!--        <td><img src="./images/barn.gif" width="24" height="24" /></td>-->
-        <!--        <td>Stable</td>-->
-        <!--      </tr>-->
-        <!--      <tr>-->
-        <!--        <td><img src="./images/torch.gif" width="24" height="24" /></td>-->
-        <!--        <td>General Store</td>-->
-        <!--        <td><img src="./images/leaf.gif" width="24" height="24" /></td>-->
-        <!--        <td>Reagent Shop</td>-->
-        <!--      </tr>-->
-        <!--      <tr>-->
-        <!--        <td><img src="./images/shield.gif" width="24" height="24" /></td>-->
-        <!--        <td>Armor Shop</td>-->
-        <!--        <td><img src="./images/sword.gif" width="24" height="24" /></td>-->
-        <!--        <td>Weapon Shop</td>-->
-        <!--      </tr>-->
-        <!--      <tr>-->
-        <!--        <td><img src="./images/bow.gif" width="24" height="24" /></td>-->
-        <!--        <td>Archery Shop</td>-->
-        <!--        <td><img src="./images/white.gif" width="24" height="24" /></td>-->
-        <!--        <td>Jeweler</td>-->
-        <!--      </tr>-->
-        <!--      <tr>-->
-        <!--        <td><img src="./images/bottle.gif" width="24" height="24" /></td>-->
-        <!--        <td>Potion Shop</td>-->
-        <!--        <td><img src="./images/stars.gif" width="24" height="24" /></td>-->
-        <!--        <td>Magic Shop</td>-->
-        <!--      </tr>-->
-        <!--      <tr>-->
-        <!--        <td><img src="./images/pliers.gif" width="24" height="24" /></td>-->
-        <!--        <td>Tinkering Shop</td>-->
-        <!--        <td><img src="./images/scissors.gif" width="24" height="24" /></td>-->
-        <!--        <td>Tailoring Shop</td>-->
-        <!--      </tr>-->
-        <!--      <tr>-->
-        <!--        <td><img src="./images/hotel.gif" width="24" height="24" /></td>-->
-        <!--        <td>Inn</td>-->
-        <!--        <td><img src="./images/house.gif" width="24" height="24" /></td>-->
-        <!--        <td>House</td>-->
-        <!--      </tr>-->
-        <!--      <tr>-->
-        <!--        <td><img src="./images/chest.gif" width="24" height="24" /></td>-->
-        <!--        <td>Treasure Chest</td>-->
-        <!--        <td><img src="./images/jail.gif" width="24" height="24" /></td>-->
-        <!--        <td>Jail</td>-->
-        <!--      </tr>-->
-        <!--      <tr>-->
-        <!--        <td><img src="./images/castle.gif" width="24" height="24" /></td>-->
-        <!--        <td>Castle</td>-->
-        <!--        <td><img src="./images/chess.gif" width="24" height="24" /></td>-->
-        <!--        <td>Chess Board</td>-->
-        <!--      </tr>-->
-        <!--      <tr>-->
-        <!--        <td><img src="./images/guild.gif" width="24" height="24" /></td>-->
-        <!--        <td>Guild Hall</td>-->
-        <!--        <td><img src="./images/death.gif" width="24" height="24" /></td>-->
-        <!--        <td>Cemetary</td>-->
-        <!--      </tr>-->
-        <!--      </table>-->
-        <!--    </td>-->
-        <!--  </tr>-->
         <tr>
             <td class="category"><a href="#" onclick="return hidify_showify('settings','settings_arrow');"><img
                     alt="Expand" border="0" id="settings_arrow" src="./images/arrow_down.gif"/> Settings</a></td>
@@ -2946,9 +2856,23 @@ of the dropped item, and where (dd.obj.x, dd.obj.y) it has been dropped... */
                         </tr>
                     </table>
                 </form>
+            </td>
+        </tr>
     </table>
 </div>
-
+<div id="close-app">
+    <td id="close">
+        <button id="quit">Quit</button>
+        <script type="text/javascript">
+            // include the ipc module to communicate with main process.
+            const { ipcRenderer } = require('electron');
+            const quit = document.getElementById("quit");
+            quit.addEventListener("click", () => {
+                ipcRenderer.send("quit");
+            });
+        </script>
+    </td>
+</div>
 <script type="text/javascript">
     // <!--
 
