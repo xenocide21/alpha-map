@@ -8,6 +8,8 @@ This application was designed by Zee using Zee's Map, and packaged into Electron
 
 ## Start up process:
 
+The project was built from the ground up using the following commands:
+
 ### `npm init -y`
 
 initialize NPM
@@ -23,6 +25,8 @@ installs Electron-Forge
 ### `npx electron-forge import`
 
 imports electron application into electron forge workflow
+
+After you install NPM you should be able to run npm start to begin the platform through your ide. To build the application, run `npx electron-forge import` then `npm run make`
 
 ## Run commands
 
