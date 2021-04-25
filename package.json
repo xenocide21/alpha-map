@@ -1,6 +1,6 @@
 {
   "name": "oberin-map",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Interactive World Map of Oberin",
   "main": "main.js",
   "scripts": {
