@@ -7,12 +7,32 @@
             overflow: hidden;
             background-image: url("images/10-3-Panther-Desktop.png");
             background-size: 100% 100%;
+            -webkit-app-region: drag;
+            width: 100%;
+            height: 100%;
+        }
+        #magchanger {
+            -webkit-app-region: no-drag;
+        }
+        #sidebar {
+            -webkit-app-region: no-drag;
+        }
+        #sidebar2{
+            -webkit-app-region: no-drag;
+        }
+        #search {
+            -webkit-app-region: no-drag;
+        }
+        #pins {
+            -webkit-app-region: no-drag;
         }
         #map {
+            -webkit-app-region: no-drag;
             position: absolute;
             left: 50%;
             overflow: hidden;
             z-index: 10;
+            margin-top: 20px;
             margin-left: -320px;
             background: #000;
             height: 640px;
@@ -39,7 +59,7 @@
             left: 50%;
             padding: 0;
             margin-left: -315px;
-            margin-top: 5px;
+            margin-top: 25px;
             z-index: 20;
             border-collapse: collapse;
         }
@@ -55,7 +75,7 @@
             left: 50%;
             z-index: 20;
             margin-left: 325px;
-            margin-top: 0;
+            margin-top: 25;
             width: 185px;
         }
 
@@ -64,7 +84,7 @@
             right: 50%;
             z-index: 20;
             margin-right: 325px;
-            margin-top: 0;
+            margin-top: 25;
             width: 185px;
         }
 
@@ -73,7 +93,7 @@
             left: 50%;
             padding: 0;
             margin-left: -315px;
-            margin-top: 5px;
+            margin-top: 25px;
             font-size: 15px;
             font-weight: bold;
             color: #f00;
@@ -105,7 +125,7 @@
             left: 50%;
             padding: 0;
             margin-left: -294px;
-            margin-top: 5px;
+            margin-top: 25px;
             font-size: 15px;
             font-weight: bold;
             color: #fff;
@@ -120,7 +140,7 @@
             left: 50%;
             padding: 0;
             margin-left: 0;
-            margin-top: 5px;
+            margin-top: 25px;
             font-size: 15px;
             font-weight: bold;
             color: #fff;
@@ -2611,8 +2631,10 @@ of the dropped item, and where (dd.obj.x, dd.obj.y) it has been dropped... */
         </tr>
     </table>
 
-    <div id="loadingbox"></div>
-    <div id="warningbox">Error: Zooming beyond 2x magnification is restricted to Rhovanion Rebels only.</div>
+    <div id="loadingbox">
+    </div>
+    <div id="warningbox">Error: Zooming beyond 2x magnification is restricted to Rhovanion Rebels only.
+    </div>
 
     <div id="coordsbox">&nbsp;</div>
 
@@ -2620,7 +2642,7 @@ of the dropped item, and where (dd.obj.x, dd.obj.y) it has been dropped... */
     <table id="sidebar2">
         <tr>
             <td class="category"><a href="#" onclick="return hidify_showify('keys','keys_arrow');"><img
-                    alt="Expand" border="0" id="keys_arrow" src="./images/arrow_down.gif"/> Key</a></td>
+                    alt="Collapse" border="0" id="keys_arrow" src="./images/arrow_up.gif"/> Key</a></td>
         </tr>
         <tr>
             <td id="keys">

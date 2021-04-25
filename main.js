@@ -5,10 +5,14 @@ function createWindow () {
     const win = new BrowserWindow({
         width: 1200,
         height: 694,
-        icon: __dirname + `/o.ico`
+        icon: __dirname + `/o.ico`,
+        frame: false
     })
     win.loadFile('startup.html')
     win.setMenu(null)
+    win.setResizable(false)
+    win.setMaximizable(false)
+
 }
 
 app.whenReady().then(() => {
