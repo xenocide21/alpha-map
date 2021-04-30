@@ -4,10 +4,11 @@
     <title>Oberin Map</title>
     <style type="text/css">
         body {
+            border-radius: 5px 5px 0 0;
             overflow: hidden;
-            background-image: url("images/10-3-Panther-Desktop.png");
+            /* background-image: url("images/10-3-Panther-Desktop.png"); */
             background-size: 100% 100%;
-            -webkit-app-region: drag;
+
             width: 100%;
             height: 100%;
             -webkit-touch-callout: none; /* iOS Safari */
@@ -39,7 +40,7 @@
             left: 50%;
             overflow: hidden;
             z-index: 10;
-            margin-top: 20px;
+            margin-top: 25px;
             margin-left: -320px;
             background: #000;
             height: 640px;
@@ -71,7 +72,7 @@
             left: 50%;
             padding: 0;
             margin-left: -315px;
-            margin-top: 25px;
+            margin-top: 30px;
             z-index: 20;
             border-collapse: collapse;
         }
@@ -87,7 +88,7 @@
             left: 50%;
             z-index: 20;
             margin-left: 325px;
-            margin-top: 25;
+            margin-top: 25px;
             width: 185px;
         }
 
@@ -96,7 +97,7 @@
             right: 50%;
             z-index: 20;
             margin-right: 325px;
-            margin-top: 25;
+            margin-top: 25px;
             width: 185px;
         }
 
@@ -137,7 +138,7 @@
             left: 50%;
             padding: 0;
             margin-left: -294px;
-            margin-top: 25px;
+            margin-top: 30px;
             font-size: 15px;
             font-weight: bold;
             color: #fff;
@@ -174,6 +175,65 @@
         #settings {
             display: none;
         }
+
+        .close {
+            margin-top: .25em;
+            margin-left: .5em;
+            -webkit-app-region: no-drag;
+            position: relative;
+            display: inline-block;
+        }
+
+        .close .closeSel {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 99;
+        }
+
+        .close:hover .closeSel {
+            display: inline;
+        }
+
+        .minimize {
+            margin-top: .25em;
+            margin-left: .25em;
+            position: relative;
+            display: inline-block;
+            -webkit-app-region: no-drag;
+        }
+        .minimize .minSel {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 99;
+        }
+
+        .minimize:hover .minSel {
+            display: inline;
+        }
+
+        #menu-bar {
+            -webkit-app-region: drag;
+            position: fixed;
+            background-color: #bcbcbc;
+            border-radius: 5px 5px 0 0;
+            margin: 0;
+            top: 0;
+            left: 0;
+            z-index: 99;
+            width: 100%;
+        }
+        .main {
+            background-color: white;
+            height: 100%;
+            top: 0;
+            left: 0;
+            border-radius: 5px 5px 0 0;
+        }
+
     </style>
 </head>
 <body>
@@ -2362,172 +2422,185 @@ of the dropped item, and where (dd.obj.x, dd.obj.y) it has been dropped... */
     // -->
 </script>
 
-<div style="position:relative; width:100%; height:650px; z-index:1;">
-    <div id="map">
-        <div cellpadding="0" cellspacing="0" id="mapgrid">
-            <table border="0" cellpadding="0" cellspacing="0" id="mapgridinner">
-                <tr>
-                    <td width="128"><img border="0" height="128"
-                                         onerror="this.src='./images/trans.gif';" onload="loadedImg();" src="./images/trans.gif" width="128"/>
-                    </td>
-                    <td width="128"><img border="0" height="128"
-                                         onerror="this.src='./images/trans.gif';" onload="loadedImg();" src="./images/trans.gif" width="128"/>
-                    </td>
-                    <td width="128"><img border="0" height="128"
-                                         onerror="this.src='./images/trans.gif';" onload="loadedImg();" src="./images/trans.gif" width="128"/>
-                    </td>
-                    <td width="128"><img border="0" height="128"
-                                         onerror="this.src='./images/trans.gif';" onload="loadedImg();" src="./images/trans.gif" width="128"/>
-                    </td>
-                    <td width="128"><img border="0" height="128"
-                                         onerror="this.src='./images/trans.gif';" onload="loadedImg();" src="./images/trans.gif" width="128"/>
-                    </td>
-                    <td width="128"><img border="0" height="128"
-                                         onerror="this.src='./images/trans.gif';" onload="loadedImg();" src="./images/trans.gif" width="128"/>
-                    </td>
-                    <td width="128"><img border="0" height="128"
-                                         onerror="this.src='./images/trans.gif';" onload="loadedImg();" src="./images/trans.gif" width="128"/>
-                    </td>
-                </tr>
-                <tr>
-                    <td width="128"><img border="0" height="128"
-                                         onerror="this.src='./images/trans.gif';" onload="loadedImg();" src="./images/trans.gif" width="128"/>
-                    </td>
-                    <td width="128"><img border="0" height="128"
-                                         onerror="this.src='./images/trans.gif';" onload="loadedImg();" src="./images/trans.gif" width="128"/>
-                    </td>
-                    <td width="128"><img border="0" height="128"
-                                         onerror="this.src='./images/trans.gif';" onload="loadedImg();" src="./images/trans.gif" width="128"/>
-                    </td>
-                    <td width="128"><img border="0" height="128"
-                                         onerror="this.src='./images/trans.gif';" onload="loadedImg();" src="./images/trans.gif" width="128"/>
-                    </td>
-                    <td width="128"><img border="0" height="128"
-                                         onerror="this.src='./images/trans.gif';" onload="loadedImg();" src="./images/trans.gif" width="128"/>
-                    </td>
-                    <td width="128"><img border="0" height="128"
-                                         onerror="this.src='./images/trans.gif';" onload="loadedImg();" src="./images/trans.gif" width="128"/>
-                    </td>
-                    <td width="128"><img border="0" height="128"
-                                         onerror="this.src='./images/trans.gif';" onload="loadedImg();" src="./images/trans.gif" width="128"/>
-                    </td>
-                </tr>
-                <tr>
-                    <td width="128"><img border="0" height="128"
-                                         onerror="this.src='./images/trans.gif';" onload="loadedImg();" src="./images/trans.gif" width="128"/>
-                    </td>
-                    <td width="128"><img border="0" height="128"
-                                         onerror="this.src='./images/trans.gif';" onload="loadedImg();" src="./images/trans.gif" width="128"/>
-                    </td>
-                    <td width="128"><img border="0" height="128"
-                                         onerror="this.src='./images/trans.gif';" onload="loadedImg();" src="./images/trans.gif" width="128"/>
-                    </td>
-                    <td width="128"><img border="0" height="128"
-                                         onerror="this.src='./images/trans.gif';" onload="loadedImg();" src="./images/trans.gif" width="128"/>
-                    </td>
-                    <td width="128"><img border="0" height="128"
-                                         onerror="this.src='./images/trans.gif';" onload="loadedImg();" src="./images/trans.gif" width="128"/>
-                    </td>
-                    <td width="128"><img border="0" height="128"
-                                         onerror="this.src='./images/trans.gif';" onload="loadedImg();" src="./images/trans.gif" width="128"/>
-                    </td>
-                    <td width="128"><img border="0" height="128"
-                                         onerror="this.src='./images/trans.gif';" onload="loadedImg();" src="./images/trans.gif" width="128"/>
-                    </td>
-                </tr>
-                <tr>
-                    <td width="128"><img border="0" height="128"
-                                         onerror="this.src='./images/trans.gif';" onload="loadedImg();" src="./images/trans.gif" width="128"/>
-                    </td>
-                    <td width="128"><img border="0" height="128"
-                                         onerror="this.src='./images/trans.gif';" onload="loadedImg();" src="./images/trans.gif" width="128"/>
-                    </td>
-                    <td width="128"><img border="0" height="128"
-                                         onerror="this.src='./images/trans.gif';" onload="loadedImg();" src="./images/trans.gif" width="128"/>
-                    </td>
-                    <td width="128"><img border="0" height="128"
-                                         onerror="this.src='./images/trans.gif';" onload="loadedImg();" src="./images/trans.gif" width="128"/>
-                    </td>
-                    <td width="128"><img border="0" height="128"
-                                         onerror="this.src='./images/trans.gif';" onload="loadedImg();" src="./images/trans.gif" width="128"/>
-                    </td>
-                    <td width="128"><img border="0" height="128"
-                                         onerror="this.src='./images/trans.gif';" onload="loadedImg();" src="./images/trans.gif" width="128"/>
-                    </td>
-                    <td width="128"><img border="0" height="128"
-                                         onerror="this.src='./images/trans.gif';" onload="loadedImg();" src="./images/trans.gif" width="128"/>
-                    </td>
-                </tr>
-                <tr>
-                    <td width="128"><img border="0" height="128"
-                                         onerror="this.src='./images/trans.gif';" onload="loadedImg();" src="./images/trans.gif" width="128"/>
-                    </td>
-                    <td width="128"><img border="0" height="128"
-                                         onerror="this.src='./images/trans.gif';" onload="loadedImg();" src="./images/trans.gif" width="128"/>
-                    </td>
-                    <td width="128"><img border="0" height="128"
-                                         onerror="this.src='./images/trans.gif';" onload="loadedImg();" src="./images/trans.gif" width="128"/>
-                    </td>
-                    <td width="128"><img border="0" height="128"
-                                         onerror="this.src='./images/trans.gif';" onload="loadedImg();" src="./images/trans.gif" width="128"/>
-                    </td>
-                    <td width="128"><img border="0" height="128"
-                                         onerror="this.src='./images/trans.gif';" onload="loadedImg();" src="./images/trans.gif" width="128"/>
-                    </td>
-                    <td width="128"><img border="0" height="128"
-                                         onerror="this.src='./images/trans.gif';" onload="loadedImg();" src="./images/trans.gif" width="128"/>
-                    </td>
-                    <td width="128"><img border="0" height="128"
-                                         onerror="this.src='./images/trans.gif';" onload="loadedImg();" src="./images/trans.gif" width="128"/>
-                    </td>
-                </tr>
-                <tr>
-                    <td width="128"><img border="0" height="128"
-                                         onerror="this.src='./images/trans.gif';" onload="loadedImg();" src="./images/trans.gif" width="128"/>
-                    </td>
-                    <td width="128"><img border="0" height="128"
-                                         onerror="this.src='./images/trans.gif';" onload="loadedImg();" src="./images/trans.gif" width="128"/>
-                    </td>
-                    <td width="128"><img border="0" height="128"
-                                         onerror="this.src='./images/trans.gif';" onload="loadedImg();" src="./images/trans.gif" width="128"/>
-                    </td>
-                    <td width="128"><img border="0" height="128"
-                                         onerror="this.src='./images/trans.gif';" onload="loadedImg();" src="./images/trans.gif" width="128"/>
-                    </td>
-                    <td width="128"><img border="0" height="128"
-                                         onerror="this.src='./images/trans.gif';" onload="loadedImg();" src="./images/trans.gif" width="128"/>
-                    </td>
-                    <td width="128"><img border="0" height="128"
-                                         onerror="this.src='./images/trans.gif';" onload="loadedImg();" src="./images/trans.gif" width="128"/>
-                    </td>
-                    <td width="128"><img border="0" height="128"
-                                         onerror="this.src='./images/trans.gif';" onload="loadedImg();" src="./images/trans.gif" width="128"/>
-                    </td>
-                </tr>
-                <tr>
-                    <td width="128"><img border="0" height="128"
-                                         onerror="this.src='./images/trans.gif';" onload="loadedImg();" src="./images/trans.gif" width="128"/>
-                    </td>
-                    <td width="128"><img border="0" height="128"
-                                         onerror="this.src='./images/trans.gif';" onload="loadedImg();" src="./images/trans.gif" width="128"/>
-                    </td>
-                    <td width="128"><img border="0" height="128"
-                                         onerror="this.src='./images/trans.gif';" onload="loadedImg();" src="./images/trans.gif" width="128"/>
-                    </td>
-                    <td width="128"><img border="0" height="128"
-                                         onerror="this.src='./images/trans.gif';" onload="loadedImg();" src="./images/trans.gif" width="128"/>
-                    </td>
-                    <td width="128"><img border="0" height="128"
-                                         onerror="this.src='./images/trans.gif';" onload="loadedImg();" src="./images/trans.gif" width="128"/>
-                    </td>
-                    <td width="128"><img border="0" height="128"
-                                         onerror="this.src='./images/trans.gif';" onload="loadedImg();" src="./images/trans.gif" width="128"/>
-                    </td>
-                    <td width="128"><img border="0" height="128"
-                                         onerror="this.src='./images/trans.gif';" onload="loadedImg();" src="./images/trans.gif" width="128"/>
-                    </td>
-                </tr>
-            </table>
+<div class="main" style="position:fixed; width:100%; height:675px; z-index:99;">
+
+    <div id="mapContainer">
+        <div id="menu-bar">
+            <div class="close">
+                <img src="images/Red_Circle.png" alt="Normal"/>
+                <img class="closeSel" src="images/Close_Icon.png" alt="Selected"/>
+            </div>
+            <div class="minimize">
+                <img src="images/Yel_Circle.png" alt="Normal"/>
+                <img class="minSel" src="images/Minimize.png" alt="Selected"/>
+            </div>
+        </div>
+        <div id="map">
+            <div cellpadding="0" cellspacing="0" id="mapgrid">
+                <table border="0" cellpadding="0" cellspacing="0" id="mapgridinner">
+                    <tr>
+                        <td width="128"><img border="0" height="128"
+                                             onerror="this.src='./images/trans.gif';" onload="loadedImg();" src="./images/trans.gif" width="128"/>
+                        </td>
+                        <td width="128"><img border="0" height="128"
+                                             onerror="this.src='./images/trans.gif';" onload="loadedImg();" src="./images/trans.gif" width="128"/>
+                        </td>
+                        <td width="128"><img border="0" height="128"
+                                             onerror="this.src='./images/trans.gif';" onload="loadedImg();" src="./images/trans.gif" width="128"/>
+                        </td>
+                        <td width="128"><img border="0" height="128"
+                                             onerror="this.src='./images/trans.gif';" onload="loadedImg();" src="./images/trans.gif" width="128"/>
+                        </td>
+                        <td width="128"><img border="0" height="128"
+                                             onerror="this.src='./images/trans.gif';" onload="loadedImg();" src="./images/trans.gif" width="128"/>
+                        </td>
+                        <td width="128"><img border="0" height="128"
+                                             onerror="this.src='./images/trans.gif';" onload="loadedImg();" src="./images/trans.gif" width="128"/>
+                        </td>
+                        <td width="128"><img border="0" height="128"
+                                             onerror="this.src='./images/trans.gif';" onload="loadedImg();" src="./images/trans.gif" width="128"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="128"><img border="0" height="128"
+                                             onerror="this.src='./images/trans.gif';" onload="loadedImg();" src="./images/trans.gif" width="128"/>
+                        </td>
+                        <td width="128"><img border="0" height="128"
+                                             onerror="this.src='./images/trans.gif';" onload="loadedImg();" src="./images/trans.gif" width="128"/>
+                        </td>
+                        <td width="128"><img border="0" height="128"
+                                             onerror="this.src='./images/trans.gif';" onload="loadedImg();" src="./images/trans.gif" width="128"/>
+                        </td>
+                        <td width="128"><img border="0" height="128"
+                                             onerror="this.src='./images/trans.gif';" onload="loadedImg();" src="./images/trans.gif" width="128"/>
+                        </td>
+                        <td width="128"><img border="0" height="128"
+                                             onerror="this.src='./images/trans.gif';" onload="loadedImg();" src="./images/trans.gif" width="128"/>
+                        </td>
+                        <td width="128"><img border="0" height="128"
+                                             onerror="this.src='./images/trans.gif';" onload="loadedImg();" src="./images/trans.gif" width="128"/>
+                        </td>
+                        <td width="128"><img border="0" height="128"
+                                             onerror="this.src='./images/trans.gif';" onload="loadedImg();" src="./images/trans.gif" width="128"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="128"><img border="0" height="128"
+                                             onerror="this.src='./images/trans.gif';" onload="loadedImg();" src="./images/trans.gif" width="128"/>
+                        </td>
+                        <td width="128"><img border="0" height="128"
+                                             onerror="this.src='./images/trans.gif';" onload="loadedImg();" src="./images/trans.gif" width="128"/>
+                        </td>
+                        <td width="128"><img border="0" height="128"
+                                             onerror="this.src='./images/trans.gif';" onload="loadedImg();" src="./images/trans.gif" width="128"/>
+                        </td>
+                        <td width="128"><img border="0" height="128"
+                                             onerror="this.src='./images/trans.gif';" onload="loadedImg();" src="./images/trans.gif" width="128"/>
+                        </td>
+                        <td width="128"><img border="0" height="128"
+                                             onerror="this.src='./images/trans.gif';" onload="loadedImg();" src="./images/trans.gif" width="128"/>
+                        </td>
+                        <td width="128"><img border="0" height="128"
+                                             onerror="this.src='./images/trans.gif';" onload="loadedImg();" src="./images/trans.gif" width="128"/>
+                        </td>
+                        <td width="128"><img border="0" height="128"
+                                             onerror="this.src='./images/trans.gif';" onload="loadedImg();" src="./images/trans.gif" width="128"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="128"><img border="0" height="128"
+                                             onerror="this.src='./images/trans.gif';" onload="loadedImg();" src="./images/trans.gif" width="128"/>
+                        </td>
+                        <td width="128"><img border="0" height="128"
+                                             onerror="this.src='./images/trans.gif';" onload="loadedImg();" src="./images/trans.gif" width="128"/>
+                        </td>
+                        <td width="128"><img border="0" height="128"
+                                             onerror="this.src='./images/trans.gif';" onload="loadedImg();" src="./images/trans.gif" width="128"/>
+                        </td>
+                        <td width="128"><img border="0" height="128"
+                                             onerror="this.src='./images/trans.gif';" onload="loadedImg();" src="./images/trans.gif" width="128"/>
+                        </td>
+                        <td width="128"><img border="0" height="128"
+                                             onerror="this.src='./images/trans.gif';" onload="loadedImg();" src="./images/trans.gif" width="128"/>
+                        </td>
+                        <td width="128"><img border="0" height="128"
+                                             onerror="this.src='./images/trans.gif';" onload="loadedImg();" src="./images/trans.gif" width="128"/>
+                        </td>
+                        <td width="128"><img border="0" height="128"
+                                             onerror="this.src='./images/trans.gif';" onload="loadedImg();" src="./images/trans.gif" width="128"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="128"><img border="0" height="128"
+                                             onerror="this.src='./images/trans.gif';" onload="loadedImg();" src="./images/trans.gif" width="128"/>
+                        </td>
+                        <td width="128"><img border="0" height="128"
+                                             onerror="this.src='./images/trans.gif';" onload="loadedImg();" src="./images/trans.gif" width="128"/>
+                        </td>
+                        <td width="128"><img border="0" height="128"
+                                             onerror="this.src='./images/trans.gif';" onload="loadedImg();" src="./images/trans.gif" width="128"/>
+                        </td>
+                        <td width="128"><img border="0" height="128"
+                                             onerror="this.src='./images/trans.gif';" onload="loadedImg();" src="./images/trans.gif" width="128"/>
+                        </td>
+                        <td width="128"><img border="0" height="128"
+                                             onerror="this.src='./images/trans.gif';" onload="loadedImg();" src="./images/trans.gif" width="128"/>
+                        </td>
+                        <td width="128"><img border="0" height="128"
+                                             onerror="this.src='./images/trans.gif';" onload="loadedImg();" src="./images/trans.gif" width="128"/>
+                        </td>
+                        <td width="128"><img border="0" height="128"
+                                             onerror="this.src='./images/trans.gif';" onload="loadedImg();" src="./images/trans.gif" width="128"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="128"><img border="0" height="128"
+                                             onerror="this.src='./images/trans.gif';" onload="loadedImg();" src="./images/trans.gif" width="128"/>
+                        </td>
+                        <td width="128"><img border="0" height="128"
+                                             onerror="this.src='./images/trans.gif';" onload="loadedImg();" src="./images/trans.gif" width="128"/>
+                        </td>
+                        <td width="128"><img border="0" height="128"
+                                             onerror="this.src='./images/trans.gif';" onload="loadedImg();" src="./images/trans.gif" width="128"/>
+                        </td>
+                        <td width="128"><img border="0" height="128"
+                                             onerror="this.src='./images/trans.gif';" onload="loadedImg();" src="./images/trans.gif" width="128"/>
+                        </td>
+                        <td width="128"><img border="0" height="128"
+                                             onerror="this.src='./images/trans.gif';" onload="loadedImg();" src="./images/trans.gif" width="128"/>
+                        </td>
+                        <td width="128"><img border="0" height="128"
+                                             onerror="this.src='./images/trans.gif';" onload="loadedImg();" src="./images/trans.gif" width="128"/>
+                        </td>
+                        <td width="128"><img border="0" height="128"
+                                             onerror="this.src='./images/trans.gif';" onload="loadedImg();" src="./images/trans.gif" width="128"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="128"><img border="0" height="128"
+                                             onerror="this.src='./images/trans.gif';" onload="loadedImg();" src="./images/trans.gif" width="128"/>
+                        </td>
+                        <td width="128"><img border="0" height="128"
+                                             onerror="this.src='./images/trans.gif';" onload="loadedImg();" src="./images/trans.gif" width="128"/>
+                        </td>
+                        <td width="128"><img border="0" height="128"
+                                             onerror="this.src='./images/trans.gif';" onload="loadedImg();" src="./images/trans.gif" width="128"/>
+                        </td>
+                        <td width="128"><img border="0" height="128"
+                                             onerror="this.src='./images/trans.gif';" onload="loadedImg();" src="./images/trans.gif" width="128"/>
+                        </td>
+                        <td width="128"><img border="0" height="128"
+                                             onerror="this.src='./images/trans.gif';" onload="loadedImg();" src="./images/trans.gif" width="128"/>
+                        </td>
+                        <td width="128"><img border="0" height="128"
+                                             onerror="this.src='./images/trans.gif';" onload="loadedImg();" src="./images/trans.gif" width="128"/>
+                        </td>
+                        <td width="128"><img border="0" height="128"
+                                             onerror="this.src='./images/trans.gif';" onload="loadedImg();" src="./images/trans.gif" width="128"/>
+                        </td>
+                    </tr>
+                </table>
+            </div>
         </div>
     </div>
 

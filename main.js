@@ -5,9 +5,10 @@ const { ipcMain } = require('electron')
 function createWindow () {
     const win = new BrowserWindow({
         width: 1200,
-        height: 694,
+        height: 700,
         icon: __dirname + `/o.ico`,
-        frame: false
+        frame: false,
+        transparent: true
     })
     win.loadFile('startup.html')
     win.setMenu(null)
