@@ -9,6 +9,7 @@ async function createWindow () {
         icon: __dirname + `/o.ico`,
         frame: false,
         transparent: true,
+        autoHideMenuBar: true,
         webPreferences: {
             nodeIntegration: true,
             contextIsolation: false,
@@ -24,7 +25,7 @@ async function createWindow () {
     // })
 
     // SHOW DEV TOOLS ON MAINWINDOW @ LOADURL, CAN MAKE EVENT AND BUTTON TO TOGGLE THIS FEATURE FOR DEV
-    mainWindow.webContents.openDevTools()
+    // mainWindow.webContents.openDevTools()
 
     mainWindow.on('closed', function () {
         mainWindow = null

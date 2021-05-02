@@ -1587,19 +1587,20 @@ http://www.walterzorn.de/dragdrop/api.htm (german)	*/
     }
 
     function incMagLevel() {
-        if (groundLevel >= 10)
-        return;
+        // groundLevel default 10, reset to 1 to stop zoom underground beyond level 1.
+        if (groundLevel >= 1)
+          return
         if (magLevel === 32)
-        return changeMagLevel(32, groundLevel + 1);
-        return changeMagLevel(magLevel * 2, 0);
+          return changeMagLevel(32, groundLevel + 1);
+          return changeMagLevel(magLevel * 2, 0);
     }
 
     function decMagLevel() {
         if (magLevel === 1)
-        return;
+          return;
         if (groundLevel > 0)
-        return changeMagLevel(32, groundLevel - 1);
-        return changeMagLevel(magLevel / 2, 0);
+          return changeMagLevel(32, groundLevel - 1);
+          return changeMagLevel(magLevel / 2, 0);
     }
 
     function reCenter() {
