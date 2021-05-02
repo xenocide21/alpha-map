@@ -1,40 +1,48 @@
 const { app, BrowserWindow } = require('electron')
-//const path = require('path')
-const { ipcMain } = require('electron')
 
-function createWindow () {
-    const win = new BrowserWindow({
+let mainWindow
+
+async function createWindow () {
+    mainWindow = new BrowserWindow({
         width: 1200,
         height: 700,
         icon: __dirname + `/o.ico`,
         frame: false,
-        transparent: true
+        transparent: true,
+        webPreferences: {
+            nodeIntegration: true,
+            contextIsolation: false,
+            enableRemoteModule: true}
     })
-    win.loadFile('startup.html')
-    win.setMenu(null)
-    win.setResizable(false)
-    win.setMaximizable(false)
+    mainWindow.loadURL(`file://${__dirname}/startup.html`).then(()=>{
+        console.log({Message: "URL Loaded"})
+    })
+    // BYPASS BOOT SCREEN COMMENT ABOVE AND UNCOMMENT BELOW
+    // mainWindow.loadURL(`file://${__dirname}/index.html`).then(()=>{
+    //     console.log({Message: "URL Loaded"})
+    // })
 
+    // mainWindow.webContents.openDevTools()
+
+    mainWindow.on('closed', function () {
+        mainWindow = null
+    })
 }
 
 app.whenReady().then(() => {
-    createWindow()
-
-    app.on('activate', () => {
         if (BrowserWindow.getAllWindows().length === 0) {
-            createWindow()
+            createWindow().then(r => console.log({Message: "Application Started"}))
         }
-    })
 })
 
 
-ipcMain.on('quit', (e) => {
-    e.preventDefault()
-    app.quit()
-})
-
-app.on('window-all-closed', () => {
-    if (process.platform !== 'darwin') {
-        app.quit()
-    }
-})
+// ipcMain.on('quit', (e) => {
+//     e.preventDefault()
+//     app.quit()
+// })
+//
+// app.on('window-all-closed', () => {
+//     if (process.platform !== 'darwin') {
+//         app.quit()
+//     }
+// })
