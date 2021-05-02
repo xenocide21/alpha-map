@@ -22,6 +22,7 @@ async function createWindow () {
     //     console.log({Message: "URL Loaded"})
     // })
 
+    // SHOW DEV TOOLS ON MAINWINDOW @ LOADURL, CAN MAKE EVENT AND BUTTON TO TOGGLE THIS FEATURE FOR DEV
     // mainWindow.webContents.openDevTools()
 
     mainWindow.on('closed', function () {
