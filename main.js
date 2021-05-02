@@ -17,6 +17,7 @@ async function createWindow () {
     mainWindow.loadURL(`file://${__dirname}/startup.html`).then(()=>{
         console.log({Message: "URL Loaded"})
     })
+    
     // BYPASS BOOT SCREEN COMMENT ABOVE AND UNCOMMENT BELOW
     // mainWindow.loadURL(`file://${__dirname}/index.html`).then(()=>{
     //     console.log({Message: "URL Loaded"})
