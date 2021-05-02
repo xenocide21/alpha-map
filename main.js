@@ -34,15 +34,3 @@ app.whenReady().then(() => {
             createWindow().then(r => console.log({Message: "Application Started"}))
         }
 })
-
-
-// ipcMain.on('quit', (e) => {
-//     e.preventDefault()
-//     app.quit()
-// })
-//
-// app.on('window-all-closed', () => {
-//     if (process.platform !== 'darwin') {
-//         app.quit()
-//     }
-// })
