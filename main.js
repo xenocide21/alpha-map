@@ -4,7 +4,7 @@ let mainWindow
 
 async function createWindow () {
     mainWindow = new BrowserWindow({
-        width: 1200,
+        width: 1080,
         height: 700,
         icon: __dirname + `/o.ico`,
         frame: false,
@@ -17,14 +17,14 @@ async function createWindow () {
     mainWindow.loadURL(`file://${__dirname}/startup.html`).then(()=>{
         console.log({Message: "URL Loaded"})
     })
-    
+
     // BYPASS BOOT SCREEN COMMENT ABOVE AND UNCOMMENT BELOW
     // mainWindow.loadURL(`file://${__dirname}/index.html`).then(()=>{
     //     console.log({Message: "URL Loaded"})
     // })
 
     // SHOW DEV TOOLS ON MAINWINDOW @ LOADURL, CAN MAKE EVENT AND BUTTON TO TOGGLE THIS FEATURE FOR DEV
-    // mainWindow.webContents.openDevTools()
+    mainWindow.webContents.openDevTools()
 
     mainWindow.on('closed', function () {
         mainWindow = null
