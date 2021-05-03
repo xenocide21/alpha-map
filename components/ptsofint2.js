@@ -36,7 +36,8 @@
     FirePortal = "fire";
 
     flag = new Array(11);
-    flag[0] = [[1363, 347, Castle, "? (Castle)"],
+    flag[0] = [
+        [1363, 347, Castle, "? (Castle)"],
         [1960, 939, Chess, "Chess Board"],
         [2173, 1209, Down, "Rat Cave"],
         [1955, 1757, Down, "Andris Sewers"],
