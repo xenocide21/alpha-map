@@ -32,7 +32,7 @@
             left: 50%;
             overflow: hidden;
             z-index: 10;
-            margin-top: 25px;
+            margin-top: 10px; /* default 25 */
             margin-left: -324px;
             background: #000;
             height: 640px;
@@ -60,7 +60,7 @@
             left: 50%;
             padding: 0;
             margin-left: -315px;
-            margin-top: 35px;
+            margin-top: 20px; /* default 35 */
             z-index: 20;
             border-collapse: collapse;
         }
@@ -76,7 +76,7 @@
             left: 50%;
             z-index: 20;
             margin-left: 325px;
-            margin-top: 25px;
+            margin-top: 15px; /* default 25 */
             width: 210px;
         }
 
@@ -86,7 +86,7 @@
             right: 50%;
             z-index: 20;
             margin-right: 350px;
-            margin-top: 25px;
+            margin-top: 15px; /* default 25 */
             width: 185px;
         }
 
@@ -127,7 +127,7 @@
             left: 50%;
             padding: 0;
             margin-left: -294px;
-            margin-top: 30px;
+            margin-top: 15px; /* default 30 */
             font-size: 15px;
             font-weight: bold;
             color: #fff;
@@ -142,7 +142,7 @@
             left: 49%;
             padding: 0;
             margin-left: 0;
-            margin-top: 30px;
+            margin-top: 15px; /* default 30 */
             font-size: 15px;
             font-weight: bold;
             color: #fff;
@@ -193,7 +193,7 @@
             /*height: 100%;*/
             top: 0;
             left: 0;
-            border-radius: 5px 5px 0 0;
+            /*border-radius: 5px 5px 0 0;*/
         }
         #menu-btns {
             position: fixed;
@@ -210,14 +210,14 @@
         }
 
     </style>
+    //TODO: - DEPRECIATED - HIDIFY_SHOWIFY NOT USED IN THIS VERSION!!! REMOVE ALL LINKS TO SCRIPT AND DELETE SCRIPT.
+    <script type="text/javascript" src="components/hidify_showify.js"></script>
+    <script type="text/javascript" src="components/ptsofint.js"></script>
+    <script type="text/javascript" src="components/ptsofint2.js"></script>
+    <script type="text/javascript" src="components/obfuscatedMap.js"></script>
+    <script type="text/javascript" src="components/obfuscatedMenuControls.js"></script>
 </head>
 <body>
-
-<script type="text/javascript" src="components/hidify_showify.js"></script>
-<script type="text/javascript" src="components/ptsofint.js"></script>
-<script type="text/javascript" src="components/ptsofint2.js"></script>
-<script type="text/javascript" src="components/obfuscatedMap.js"></script>
-
 
 <div id="menu-bar">
         <div id="menu-btns">
@@ -739,6 +739,5 @@
 
     //-->
 </script>
-//TODO: - default menuControls.js (testing obfuscated scripts)
-<script type="text/javascript" src="components/obfuscatedMenuControls.js"></script>
+
 </body>
