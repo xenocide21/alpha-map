@@ -15,7 +15,7 @@ async function createWindow () {
             contextIsolation: false,
             enableRemoteModule: true}
     })
-    mainWindow.loadURL(`file://${__dirname}/startup.html`).then(()=>{
+    mainWindow.loadURL(`file://${__dirname}/startup2.html`).then(()=>{
         console.log({Message: "URL Loaded"})
     })
 
