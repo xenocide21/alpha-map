@@ -2,7 +2,7 @@
   "name": "oberin-map",
   "version": "0.3.2",
   "description": "Interactive World Map of Oberin",
-  "main": "main.js",
+  "main": "obfuscatedMain.js",
   "scripts": {
     "start": "electron-forge start",
     "test": "echo \"Error: no test specified\" && exit 1",
