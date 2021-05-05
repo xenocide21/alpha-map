@@ -51,6 +51,7 @@
             position: absolute;
             bottom: 85px;
             right: 42px;
+            width: 150px;
         }
 
         /*.track-artist {*/
@@ -162,6 +163,17 @@
         i.fa-step-forward,
         i.fa-step-backward {
             cursor: pointer;
+        }
+
+        #blink-me {
+            animation: blinker 1s linear infinite;
+            right: 0;
+        }
+
+        @keyframes blinker {
+            50% {
+                opacity: 0;
+            }
         }
     </style>
     <style type="text/css">
@@ -903,7 +915,8 @@
         <div class="details">
             <div style="display: none" class="now-playing">PLAYING x OF y</div>
             <div style="display: none" class="track-art"></div>
-            <div class="track-name">Track Name</div>
+<!--            <marquee behavior="scroll" direction="left">Here is some scrolling text... right to left!</marquee>-->
+            <marquee id='marquee' behavior="scroll" direction="left" scrollamount="8" class="track-name">Track Name</marquee>
             <div style="display: none" class="track-artist">Track Artist</div>
         </div>
 

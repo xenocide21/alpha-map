@@ -1,5 +1,4 @@
 
-
 // Select all the elements in the HTML page
 // and assign them to a variable
 let now_playing = document.querySelector(".now-playing");
@@ -22,7 +21,7 @@ let isPlaying = true;
 let updateTimer;
 
 // Create the audio element for the player
-let curr_track = document.createElement('audio',);
+let curr_track = document.createElement('audio');
     curr_track.autoplay = true;
 // Define the list of tracks that have to be played
 let track_list = [
@@ -76,7 +75,7 @@ function loadTrack(track_index) {
     // Update details of the track
     track_art.style.backgroundImage =
         "url(" + track_list[track_index].image + ")";
-    track_name.textContent = track_list[track_index].name;
+    track_name.textContent = "Now Playing... " + track_list[track_index].name;
     track_artist.textContent = track_list[track_index].artist;
     now_playing.textContent =
         "PLAYING " + (track_index + 1) + " OF " + track_list.length;
@@ -128,15 +127,41 @@ function playTrack() {
 
     // Replace icon with the pause icon
     playpause_btn.innerHTML = '<i class="fa fa-pause-circle fa-3x"></i>';
+
+    if( !document.getElementById('marquee')) {
+        track_name.changeElement = function changeElement(elementId) {
+            var _el = document.getElementById(elementId);
+            var _parent = _el.parentNode;
+            _parent.removeChild(_el);
+            if (_el.id === 'blink-me') {
+                _parent.innerHTML = '<marquee id="marquee" class="' + _el.className + '" behavior="scroll" direction="left" scrollamount="8"> </marquee>';
+            }
+             _el = null;
+            document.getElementById('marquee').textContent = "Now Playing... " + track_list[track_index].name
+        }
+        track_name.changeElement('blink-me')
+    }
 }
 
-function pauseTrack() {
+function pauseTrack(classNames) {
     // Pause the loaded track
     curr_track.pause();
     isPlaying = false;
 
     // Replace icon with the play icon
-    playpause_btn.innerHTML = '<i class="fa fa-play-circle fa-3x"></i>';;
+    playpause_btn.innerHTML = '<i class="fa fa-play-circle fa-3x"></i>';
+    // track_name.textContent = "Music is now paused...";
+
+    track_name.changeElement = function changeElement( elementId ) {
+        var _el = document.getElementById( elementId );
+        var _parent = _el.parentNode;
+        _parent.removeChild( _el );
+        if ( _el.id === 'marquee' ) {
+            _parent.innerHTML = '<blink id="blink-me" class="' + _el.className + '">Paused...</blink>';
+        }
+        _el = null;
+    }
+    track_name.changeElement('marquee')
 }
 
 function nextTrack() {
