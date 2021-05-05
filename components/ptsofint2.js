@@ -1,0 +1,367 @@
+    // <!--
+    Bank = "bank";
+    Stable = "barn";
+    Castle = "castle";
+    Temple = "cross";
+    Jail = "jail";
+    Chess = "chess";
+    Down = "down";
+    Fireplace = "cook";
+    Forge = "bsing";
+    DdForge = "nobsing";
+    SignArchery = "bow";
+    SignArmory = "shield";
+    SignForge = "bsing";
+    SignGeneral = "torch";
+    SignHouse = "house";
+    SignInfo = "info";
+    SignInn = "hotel";
+    SignJeweler = "white";
+    SignMagic = "stars";
+    SignPotion = "bottle";
+    SignPub = "beer";
+    SignReagent = "leaf";
+    SignRestaurant = "food";
+    SignTailor = "scissors";
+    SignTinker = "pliers";
+    SignWeapons = "sword";
+    SmChest = "chest";
+    Up = "up";
+    Guillotine = "guillotn";
+    Curiosity = "trans";
+    Statue = "trans";
+    Grave = "death";
+    Bed = "house";
+    GuildHall = "guild";
+    FirePortal = "fire";
+
+    flag = new Array(11);
+    flag[0] = [
+        [1363, 347, Castle, "? (Castle)"],
+        [1960, 939, Chess, "Chess Board"],
+        [2173, 1209, Down, "Rat Cave"],
+        [1955, 1757, Down, "Andris Sewers"],
+        [1365, 364, Down, "Marali Sewers"],
+        [1786, 1004, GuildHall, "Rhovanion Rebels Guild Hall"],
+        [975, 956, GuildHall, "The Ruins of the Mari Ranger Guild Hall"],
+        [1802, 1114, GuildHall, "Three Paths Guild Hall"],
+        [1645, 1186, GuildHall, "Roman Empire Guild Hall"],
+        [1797, 1561, GuildHall, "Abashiri Guild Hall"],
+        [2246, 1373, GuildHall, "Peace Givers Guild Hall"],
+        [2119, 1677, GuildHall, "Druid Circle Guild Hall"],
+        [2191, 1285, GuildHall, "Samourai Freiheit Guild Hall"],
+        [1776, 1479, GuildHall, "Sect of the Crystal Guild Hall"],
+        [2038, 1187, SignHouse, "House of the Hermit"],
+        [1211, 1930, SignHouse, "'This House Has An Owner.'  Anyone know who the owner is?  -Z"],
+        [1294, 771, SignHouse, "House of the Special Items Buyer"],
+        [1347, 343, Bank, "Bank"],
+        [694, 950, Temple, "? (Temple)"],
+        [1113, 921, Down, "Cave Dungeon"],
+        [1121, 1476, SignArchery, "? (Archery Shop)"],
+        [1116, 1463, Stable, "Stable"],
+        [1169, 1496, Statue, "? (Statue)"],
+        [1969, 1451, Statue, "? (Statue)"],
+        [1005, 790, SignInfo, "? (Road Sign)"],
+        [1122, 1467, SignInfo, "? (Road Sign)"],
+        [1125, 1902, SignInfo, "? (Road Sign)"],
+        [1127, 1501, SignInfo, "? (Road Sign)"],
+        [1149, 1457, SignInfo, "? (Road Sign)"],
+        [1163, 1501, SignInfo, "? (Road Sign)"],
+        [1164, 1487, SignInfo, "? (Road Sign)"],
+        [1207, 1474, SignInfo, "? (Road Sign)"],
+        [1243, 1463, SignInfo, "? (Road Sign)"],
+        [1273, 1400, SignInfo, "? (Road Sign)"],
+        [1323, 348, SignInfo, "? (Road Sign)"],
+        [1353, 390, SignInfo, "? (Road Sign)"],
+        [1383, 1237, SignInfo, "? (Road Sign)"],
+        [1392, 484, SignInfo, "? (Road Sign)"],
+        [1394, 884, SignInfo, "? (Road Sign)"],
+        [1493, 1720, SignInfo, "? (Road Sign)"],
+        [1549, 1244, SignInfo, "? (Road Sign)"],
+        [1582, 1226, SignInfo, "? (Road Sign)"],
+        [1698, 1530, SignInfo, "? (Road Sign)"],
+        [1808, 1134, SignInfo, "? (Road Sign)"],
+        [1920, 993, SignInfo, "? (Road Sign)"],
+        [1948, 1470, SignInfo, "? (Road Sign)"],
+        [1981, 985, SignInfo, "? (Road Sign)"],
+        [1996, 1760, Temple, "'In memory of Senator Waltham - Rest in Peace' (Temple)"],
+        [2034, 1305, SignInfo, "? (Road Sign)"],
+        [2230, 1340, SignInfo, "? (Road Sign)"],
+        [540, 1190, SignInfo, "? (Road Sign)"],
+        [550, 1237, SignInfo, "? (Road Sign)"],
+        [968, 914, SignInfo, "? (Road Sign)"],
+        [980, 1132, SignInfo, "? (Road Sign)"],
+        [1129, 1514, Jail, "Jail"],
+        [1152, 1434, Castle, "Mirith Castle - Home of King Galandir"],
+        [1130, 1484, SignArmory, "? (Armor Store)"],
+        [1136, 1491, SignTailor, "? (Tailor)"],
+        [1138, 1476, SignJeweler, "? (Jewelry Store)"],
+        [1146, 1470, SignPotion, "? (Potion Shop)"],
+        [1142, 1495, Fireplace, "Fireplace"],
+        [1128, 1432, Down, "Chucky's Hallway"],
+        [1153, 1424, Down, "Chucky's Hallway"],
+        [1144, 1498, SignWeapons, "? (Weapons Shop)"],
+        [1156, 1479, Bank, "Bank"],
+        [1158, 1506, Temple, "? (Temple)"],
+        [1151, 1464, SignReagent, "? (Reagent Shop)"],
+        [1165, 1923, SignGeneral, "? (General Store)"],
+        [1166, 1453, SignInn, "? (Inn)"],
+        [1167, 1440, Down, "Mirith Sewers (Down 2 levels)"],
+        [1163, 1517, SignTinker, "? (Tinkering Shop)"],
+        [1177, 1469, SignForge, "? (Forge)"],
+        [1177, 1512, SignPub, "? (Pub)"],
+        [1175, 1488, Fireplace, "Fireplace"],
+        [1176, 1931, Fireplace, "Fireplace"],
+        [1176, 1937, Chess, "Chess Board"],
+        [1178, 1508, Chess, "Chess Board"],
+        [1148, 1418, Forge, "? (Forge)"],
+        [1133, 1433, Forge, "? (Forge)"],
+        [1495, 567, DdForge, "Extinct Forge"],
+        [1525, 548, DdForge, "Extinct Forge"],
+        [1180, 1932, SignPub, "? (Pub)"],
+        [1182, 1491, SignRestaurant, "? (Restaurant)"],
+        [1194, 1477, SignGeneral, "? (General Store)"],
+        [1204, 1488, SignMagic, "? (Magic Shop)"],
+        [1255, 1591, Down, "Crypt Dungeon"],
+        [1292, 387, SignReagent, "? (Reagent Shop)"],
+        [1299, 380, SignTailor, "? (Tailor)"],
+        [1298, 392, SignPotion, "? (Potion Shop)"],
+        [1305, 397, SignArmory, "? (Armor Store)"],
+        [1307, 373, SignWeapons, "? (Weapons Shop)"],
+        [1309, 403, SignArchery, "? (Archery Shop)"],
+        [1306, 386, SignTinker, "? (Tinkering Shop)"],
+        [1315, 366, Stable, "Stable"],
+        [1317, 409, SignMagic, "? (Magic Shop)"],
+        [1320, 392, SignPub, "? (Pub)"],
+        [1320, 370, SignJeweler, "? (Jewelry Store)"],
+        [1327, 380, Fireplace, "Fireplace"],
+        [1322, 402, SignRestaurant, "? (Restaurant)"],
+        [1329, 382, SignRestaurant, "? (Restaurant)"],
+        [1330, 394, Forge, "? (Forge)"],
+        [1335, 374, SignInn, "? (Inn)"],
+        [1337, 387, SignGeneral, "? (General Store)"],
+        [1317, 382, Temple, "? (Temple)"],
+        [1375, 359, Forge, "? (Forge)"],
+        [1419, 1816, Forge, "? (Forge)"],
+        [1481, 2317, Down, "Skull Island Dungeon"],
+        [1494, 557, Down, "Aborek Dungeon"],
+        [1677, 1517, Forge, "? (Forge)"],
+        [1677, 1532, SignRestaurant, "? (Restaurant)"],
+        [1676, 1530, Fireplace, "Fireplace"],
+        [1677, 1523, SignPotion, "? (Potion Shop)"],
+        [1694, 1540, SignGeneral, "? (General Store)"],
+        [1665, 1532, Stable, "Stable"],
+        [1925, 955, SignRestaurant, "? (Restaurant)"],
+        [1939, 968, SignInn, "? (Inn)"],
+        [1933, 947, SignTailor, "? (Tailor)"],
+        [1938, 1760, Stable, "Andris Stable"],
+        [1940, 942, SignTinker, "? (Tinkering Shop)"],
+        [1950, 940, SignForge, "? (Forge)"],
+        [1956, 955, SignGeneral, "? (General Store)"],
+        [1953, 1730, SignInn, "Andris Quality Accomodation - Proprietor Bayldan (Inn)"],
+        [1915, 965, Bank, "Bank"],
+        [1962, 967, SignMagic, "? (Magic Shop)"],
+        [1962, 938, SignRestaurant, "? (Restaurant)"],
+        [1959, 1744, SignWeapons, "The Crossed Glaives (Weapons Shop)"],
+        [1967, 947, SignReagent, "? (Reagent Shop)"],
+        [1968, 1751, SignMagic, "The Amazingly Powerful Kendra (Magic Shop)"],
+        [1971, 959, SignArmory, "? (Armor Store)"],
+        [1974, 1723, Chess, "Chess Board"],
+        [1969, 1737, SignArmory, "The Helm and Shield (Armor Store)"],
+        [1977, 1721, Chess, "Chess Board"],
+        [1978, 1762, SignArchery, "The Archer's Arrows (Archery Shop)"],
+        [1981, 1749, Forge, "The Hammer and Anvil (Forge)"],
+        [1980, 952, SignJeweler, "? (Jewelry Store)"],
+        [1979, 971, SignArchery, "? (Archery Shop)"],
+        [1985, 1734, Chess, "Chess Board"],
+        [1985, 1018, Down, "Anthill"],
+        [1988, 1731, Chess, "Chess Board"],
+        [1952, 988, Jail, "Jail"],
+        [2243, 1315, Jail, "The Pit"],
+        [1935, 989, Stable, "Stable"],
+        [1996, 985, SignPotion, "? (Potion Shop)"],
+        [1981, 988, Temple, "? (Temple)"],
+        [1988, 1772, SignGeneral, "First Stop for Supplies (General Store)"],
+        [1988, 962, SignWeapons, "? (Weapons Shop)"],
+        [2000, 969, SignRestaurant, "? (Restaurant)"],
+        [1996, 1780, SignPotion, "Frebeth - Master Alchemist (Potion Shop)"],
+        [2007, 1770, SignTailor, "Andrisian Scarlet - Fine Clothes (Tailor)"],
+        [2028, 1759, SignRestaurant, "The Gourmet's Paradise (Restaurant)"],
+        [2017, 1744, Bank, "Andris Bank"],
+        [2003, 1785, Temple, "Andris Temple"],
+        [2038, 1750, Forge, "Forge inside The Gourmet's Paradise Restaurant"],
+        [2044, 1739, SignTinker, "Thalek's Tool Emporium (Tinkering Shop)"],
+        [2051, 1733, SignJeweler, "Rodolpho's Fabulous Jewellery and Crystal Boutique (Jewelry Store)"],
+        [2058, 1708, Castle, "Andris Castle"],
+        [2075, 1681, Jail, "Andris Jail"],
+        [2229, 1340, Down, "Volcano Dungeon"],
+        [2291, 1349, FirePortal, "Portal to Hell"],
+        [459, 1189, SignWeapons, "? (Weapons Shop)"],
+        [466, 1199, SignPotion, "? (Potion Shop)"],
+        [468, 1182, SignTailor, "? (Tailor)"],
+        [470, 1197, SignArchery, "? (Archery Shop)"],
+        [471, 1177, SignInn, "? (Inn)"],
+        [518, 1224, SignRestaurant, "? (Restaurant)"],
+        [525, 1210, SignArmory, "? (Armor Store)"],
+        [531, 1199, SignGeneral, "? (General Store)"],
+        [550, 1223, Forge, "? (Forge)"],
+        [124, 1350, Down, "Ice Dungeon"],
+        [748, 1064, Down, "'Unidentified' Dungeon"],
+        [881, 1706, Down, "Tunnel to Mainland"],
+        [900, 1894, Forge, "? (Forge)"],
+        [977, 958, Down, "Tree Maze Dungeon"],
+        [981, 1121, Forge, "? (Forge)"],
+        [998, 1476, Down, "Tunnel to Lizard Man's Island"],
+        [1236, 1595, Grave, "Cemetary"],
+        [1301, 772, Grave, "Cemetary"],
+        [1335, 2167, Temple, "? (Temple)"],
+        [1363, 1229, Bed, "? (House)"],
+        [1367, 1223, Bed, "? (House)"],
+        [1375, 1230, Bed, "? (House)"],
+        [1377, 1222, Bed, "? (House)"],
+        [1401, 1822, Bed, "? (House)"],
+        [1442, 405, Grave, "Cemetary"],
+        [1520, 524, Grave, "Cemetary"],
+        [1841, 648, Temple, "? (Temple)"],
+        [1964, 1457, Temple, "? (Temple)"],
+        [1957, 994, Guillotine, "? (Gallows)"],
+        [2070, 1675, Guillotine, "? (Gallows)"],
+        [2084, 976, Grave, "Cemetary"],
+        [2164, 1666, Grave, "Cemetary"],
+        [980, 1100, Bed, "? (House)"],
+        [989, 1133, Bed, "? (House)"],
+        [1122, 1436, Curiosity],
+        [1125, 1443, Curiosity],
+        [1932, 1001, Curiosity],
+        [1961, 1457, Curiosity],
+        [972, 953, Curiosity],
+        [974, 957, Curiosity],
+        [975, 953, Curiosity],
+        [1161, 1451, Fireplace, "Fireplace"],
+        [1164, 1448, Fireplace, "Fireplace"],
+        [1166, 1455, Fireplace, "Fireplace"],
+        [1167, 1446, Fireplace, "Fireplace"],
+        [1168, 1453, Fireplace, "Fireplace"],
+        [1171, 1450, Fireplace, "Fireplace"],
+        [1208, 1926, Fireplace, "Fireplace"],
+        [1370, 1220, Fireplace, "Fireplace"],
+        [1406, 1821, Fireplace, "Fireplace"],
+        [1416, 1815, Fireplace, "Fireplace"],
+        [1948, 1730, Fireplace, "Fireplace"],
+        [1951, 1727, Fireplace, "Fireplace"],
+        [1954, 1736, Fireplace, "Fireplace"],
+        [1956, 1722, Fireplace, "Fireplace"],
+        [1956, 951, Fireplace, "Fireplace"],
+        [1957, 1733, Fireplace, "Fireplace"],
+        [1962, 1728, Fireplace, "Fireplace"],
+        [1966, 945, Fireplace, "Fireplace"],
+        [1969, 1748, Fireplace, "Fireplace"],
+        [473, 1176, Fireplace, "Fireplace"],
+        [1023, 1504, Down, "Bat Cave"]
+    ];
+    flag[1] = [
+        [1096, 1441, Up, "Outside Mirith behind Castle"],
+        [2173, 1209, Up, "Exit 'New' Cave"],
+        [1955, 1757, Up, "Exit Sewers"],
+        [1365, 364, Up, "Marali Fort Forge-Room"],
+        [1113, 1458, Up, "Mirith Castle"],
+        [1113, 921, Up, "Exit Cave Dungeon"],
+        [1118, 1437, Down, "Mirith Sewers"],
+        [1167, 1440, Down, "Mirith Sewers"],
+        [1255, 1591, Up, "Exit to Mirith Cemetary"],
+        [1262, 1611, Down, "Crypt Dungeon Level 2"],
+        [1481, 2317, Up, "Exit to Skull Island"],
+        [1494, 557, Up, "Exit to Aborek"],
+        [1515, 574, Down, "Aborek Dungeon Level 2"],
+        [1952, 1035, SmChest, "Treasure Chest (50-60gp)"],
+        [1954, 1052, Down, "Queen's Chamber"],
+        [1983, 1028, SmChest, "Treasure Chest (100-120gp)"],
+        [1985, 986, SmChest, "Treasure Chest (40-100gp, sometimes Crystal Ring)"],
+        [1985, 1018, Up, "Exit Anthill"],
+        [2009, 962, SmChest, "Treasure Chest (100-125gp)"],
+        [1004, 1001, SmChest, "Treasure Chest"],
+        [1005, 1001, SmChest, "Treasure Chest"],
+        [1007, 972, SmChest, "Treasure Chest"],
+        [768, 1080, Jail, "Jail"],
+        [775, 1072, Jail, "Jail"],
+        [994, 985, SmChest, "Treasure Chest"],
+        [997, 967, SmChest, "Treasure Chest"],
+        [1365, 402, SmChest, "Treasure Chest (23gp, 1 red crystal, 4 bottles of poison)"],
+        [1357, 395, SmChest, "Treasure Chest (100gp)"],
+        [1351, 367, SmChest, "Treasure Chest (13gp, 5 red crystals)"],
+        [1377, 377, SmChest, "Treasure Chest (65gp, 5 LHPs)"],
+        [1371, 402, SmChest, "Treasure Chest (54gp, 1 nourish potion)"],
+        [1395, 388, SmChest, "Treasure Chest (75gp, 2 red crystals)"],
+        [1352, 374, SmChest, "Treasure Chest (107gp)"],
+        [2229, 1340, Up, "Exit Volcano Dungeon"],
+        [2241, 1320, Down, "Volcano Dungeon Level 2"],
+        [124, 1350, Up, "Exit Ice Dungeon"],
+        [748, 1064, Up, "Exit 'Unidentified' Dungeon"],
+        [879, 1711, Up, "Lizard Man's Island"],
+        [1000, 1471, Up, "Mainland"],
+        [977, 958, Up, "Exit Tree Maze Dungeon"],
+        [1023, 1504, Up, "Exit Batcave"]
+    ];
+    flag[2] = [
+        [1118, 1437, Up, "Chucky's Hallway"],
+        [1167, 1440, Up, "Exit Sewers (Up 2 Levels)"],
+        [1183, 1467, Down, "Zombie's Chamber"],
+        [1262, 1611, Up, "Crypt Dungeon Level 1"],
+        [1515, 574, Up, "Aborek Dungeon Level 1"],
+        [1520, 603, Down, "Aborek Dungeon Level 3"],
+        [1269, 1595, Jail, "Jail"],
+        [1272, 1591, Jail, "Jail"],
+        [1276, 1588, Jail, "Jail"],
+        [1268, 1608, Jail, "Jail"],
+        [1272, 1605, Jail, "Jail"],
+        [1275, 1601, Jail, "Jail"],
+        [1279, 1598, Jail, "Jail"],
+        [1282, 1594, Jail, "Jail"],
+        [1935, 1053, SmChest, "Treasure Chest (~500gp, sometimes rings?)"],
+        [1942, 1045, SmChest, "Treasure Chest (~300gp, sometimes diamonds)"],
+        [1127, 1438, SmChest, "Treasure Chest"],
+        [1132, 1422, SmChest, "Treasure Chest"],
+        [1137, 1442, SmChest, "Treasure Chest"],
+        [1152, 1414, SmChest, "Treasure Chest"],
+        [1157, 1427, SmChest, "Treasure Chest"],
+        [1159, 1463, SmChest, "Treasure Chest"],
+        [1197, 1453, SmChest, "Treasure Chest"],
+        [1954, 1052, Up, "Anthill"],
+        [2241, 1320, Up, "Volcano Dungeon Level 1"]
+    ];
+    flag[3] = [
+        [1183, 1467, Up, "Mirith Sewers"],
+        [1520, 603, Up, "Aborek Dungeon Level 2"],
+        [1185, 1474, SmChest, "Treasure Chest"],
+        [1186, 1473, SmChest, "Treasure Chest"],
+        [1547, 596, Down, "Aborek Dungeon Level 4"]
+    ];
+    flag[4] = [
+        [1547, 596, Up, "Aborek Dungeon Level 3"],
+        [1556, 618, Down, "Aborek Dungeon Level 5"]
+    ];
+    flag[5] = [
+        [1542, 659, Down, "Aborek Dungeon Level 6"],
+        [1556, 618, Up, "Aborek Dungeon Level 4"]
+    ];
+    flag[6] = [
+        [1542, 659, Up, "Aborek Dungeon Level 5"],
+        [1554, 656, Down, "Aborek Dungeon Level 7"]
+    ];
+    flag[7] = [
+        [1554, 656, Up, "Aborek Dungeon Level 6"],
+        [1570, 661, Down, "Aborek Dungeon Level 8"]
+    ];
+    flag[8] = [
+        [1566, 654, Down, "Aborek Dungeon Level 9"],
+        [1570, 661, Up, "Aborek Dungeon Level 7"]
+    ];
+    flag[9] = [
+        [1566, 654, Up, "Aborek Dungeon Level 8"],
+        [1569, 627, Down, "Aborek Dungeon Level 10"]
+    ];
+    flag[10] = [
+        [1569, 627, Up, "Aborek Dungeon Level 9"],
+        [1581, 646, "unknown", " The 'Silver Leaf' Portal"]
+    ];
+    // -->

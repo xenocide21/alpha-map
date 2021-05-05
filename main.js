@@ -4,20 +4,21 @@ let mainWindow
 
 async function createWindow () {
     mainWindow = new BrowserWindow({
-        width: 1200,
+        width: 1080,
         height: 700,
         icon: __dirname + `/o.ico`,
         frame: false,
         transparent: true,
+        autoHideMenuBar: true,
         webPreferences: {
             nodeIntegration: true,
             contextIsolation: false,
             enableRemoteModule: true}
     })
-    mainWindow.loadURL(`file://${__dirname}/startup.html`).then(()=>{
+    mainWindow.loadURL(`file://${__dirname}/startup2.html`).then(()=>{
         console.log({Message: "URL Loaded"})
     })
-    
+
     // BYPASS BOOT SCREEN COMMENT ABOVE AND UNCOMMENT BELOW
     // mainWindow.loadURL(`file://${__dirname}/index.html`).then(()=>{
     //     console.log({Message: "URL Loaded"})
